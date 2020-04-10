@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300&display=swap");
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.read-more {
+  background-color: #3F4759;
+  text-transform: uppercase;
+  border: none;
+  padding: 1em 2.5em;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .1rem;
+  margin: 1.5em 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.read-more:hover {
+  background-color: #434c5f;
+}
+
+.hero {
+  background: url(../images/hero.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 120vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2em;
+}
+
+.hero #hero-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  color: white;
+}
+
+.hero #hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero #hero-content p {
+  margin-top: 1em;
+  font-size: 24px;
+}
+
+.about-us {
+  padding: 2em 4em;
+  margin-bottom: -22em;
+}
+
+.about-us #head {
+  text-align: center;
+  font-size: 42px;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.about-us #head h1 {
+  padding: .5em;
+}
+
+.about-us #head h1::before {
+  content: "";
+  display: table;
+  border: 1px solid #3F4759;
+  width: 10%;
+  position: absolute;
+  top: -50px;
+  left: 45%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.about-us .text-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  font-size: 18px;
+  text-align: left;
+  grid-gap: 50px;
+  color: #3F4759;
+  line-height: 1.5rem;
+}
+
+.expedition {
+  background: url(../images/background-hills.png);
+  background-position: center;
+  background-size: 300%;
+  background-repeat: no-repeat;
+  height: 1200px;
+}
+
+.expedition #expedition-content {
+  height: 100%;
+  padding: 4em;
+  padding-top: 28em;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expedition #expedition-content #white-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.expedition #expedition-content h2 {
+  text-align: center;
+  font-size: 48px;
+}
+
+.expedition #expedition-content p {
+  font-weight: 500;
+  text-align: center;
+}
+
+.floaters {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../images/background-valley.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 3em;
+  margin-bottom: 5em;
+}
+
+.floaters .one {
+  margin-top: -5em;
+}
+
+.floaters .three .floater-content {
+  color: black;
+}
+
+.floaters .floater {
+  margin-bottom: 4em;
+}
+
+.floaters .floater-img {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 1em;
+}
+
+.floaters .floater-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.floaters .floater-content {
+  color: white;
+}
+
+.floaters .floater-content h1 {
+  font-size: 32px;
+  margin-bottom: .5em;
+}
+
+.our-leaders {
+  background: url(../images/snow-mountains.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #E2E2E2;
+}
+
+.our-leaders :nth-child(1) {
+  margin-top: -4em;
+}
+
+.our-leaders .img-box {
+  padding: 1em 4em;
+  max-width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.our-leaders .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.our-leaders #leaders-content {
+  padding: 4em;
+  margin-top: 5em;
+}
+
+.our-leaders #leaders-content #leaders-text-content {
+  background-color: rgba(56, 60, 95, 0.507);
+  background-blend-mode: color-burn;
+  color: white;
+  text-align: center;
+}
+
+.our-leaders #leaders-content #leaders-text-content h1 {
+  padding: .5em 1em;
+  font-size: 44px;
+}
+
+.our-leaders #leaders-content #leaders-text-content p {
+  padding: 1em;
+  font-size: 18px;
+}
+
+.photos #grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.photos #grid-container #bg-img1 {
+  min-height: 400px;
+  width: 100%;
+  background: url(../images/snow-hill.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photos #grid-container #bg-img2 {
+  min-height: 400px;
+  width: 100%;
+  background: url(../images/cloudy-mountains.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photos #grid-container #bg-img3 {
+  min-height: 400px;
+  width: 100%;
+  background: url(../images/rock-climbing.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photos #grid-container #bg-img4 {
+  min-height: 400px;
+  width: 100%;
+  background: url(../images/valley.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-us {
+  background: url(../images/footer-hills.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-us h1 {
+  margin: 2em auto;
+  font-size: 4.5rem;
+  color: white;
+}
+
+.contact-us #contact-container {
+  padding: 0 4em;
+  color: white;
+}
+
+.contact-us #contact-container #contact-content {
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.contact-us #contact-container #address {
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.contact-us form {
+  padding: 6em;
+  width: 100%;
+}
+
+.contact-us form input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  padding-left: 1em;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3F4759;
+}
+
+.contact-us form textarea {
+  width: 100%;
+}
+
+.contact-us form textarea::-webkit-input-placeholder {
+  padding-left: 1em;
+  padding-top: 1em;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3F4759;
+  text-transform: capitalize;
+}
+
+.contact-us form textarea:-ms-input-placeholder {
+  padding-left: 1em;
+  padding-top: 1em;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3F4759;
+  text-transform: capitalize;
+}
+
+.contact-us form textarea::-ms-input-placeholder {
+  padding-left: 1em;
+  padding-top: 1em;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3F4759;
+  text-transform: capitalize;
+}
+
+.contact-us form textarea::placeholder {
+  padding-left: 1em;
+  padding-top: 1em;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3F4759;
+  text-transform: capitalize;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(56, 60, 95, 0.507);
+}
+
+footer p {
+  margin-top: 2em;
+  padding: 2em;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .hero #hero-content h1 {
+    font-size: 68px;
+  }
+  .about-us .text-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .expedition #expedition-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .floaters {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    background-size: 150vw;
+    margin-bottom: 4em;
+  }
+  .floaters .three {
+    margin-top: -5em;
+  }
+  .floaters .three .floater-content {
+    color: white;
+  }
+  .our-leaders .img-boxes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .our-leaders .img-box {
+    margin: auto;
+    padding: 1em;
+  }
+  .our-leaders .img-box img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .photos #grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .contact-us {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .contact-us h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    margin-bottom: 0;
+  }
+  .contact-us #contact-container {
+    padding: 2em;
+    margin-top: 0;
+    margin-bottom: 3em;
+  }
+  .contact-us form {
+    padding: 2em;
+    margin-bottom: 3em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .expedition {
+    background-size: 100vw;
+  }
+  .floaters {
+    margin-top: -9em;
+  }
+  .our-leaders #leaders-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 1080px) {
+  .hero #hero-content {
+    width: 80%;
+  }
+  .hero #hero-content h1 {
+    font-size: 84px;
+  }
+  .expedition #expedition-content {
+    width: 80%;
+  }
+  .expedition #expedition-content p {
+    font-size: 22px;
+    margin-top: 1em;
+  }
+  .photos #grid-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .contact-us {
+    padding-bottom: 10em;
+    height: 120vh;
+  }
+  .contact-us #contact-container {
+    margin-bottom: 5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
