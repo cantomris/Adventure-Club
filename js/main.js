@@ -41,7 +41,7 @@ $(document).ready(function(){
 
   let expeditionScene = new ScrollMagic.Scene({
     triggerElement: ".expedition",
-    triggerHook: 0.4,
+    triggerHook: 0.1,
     reverse:false
   })
   .setTween(expedition)
