@@ -23,15 +23,17 @@ $(document).ready(function(){
   .from('#head', 1, {opacity: 0, y: 100})
   .from('.text', 1, {autoAlpha: 0, x: -100, stagger: 0.5})
   .from($('.about-button'), 0.5, {scaleY:0, ease:Power3, transformOrigin: "top left"
+  
   })
 
   let aboutScene = new ScrollMagic.Scene({
     triggerElement: '.about-us',
-    triggerHook: 0.7,
+    triggerHook: 0.75,
     reverse:false
+    
   })
   .setTween(about)
-  .addIndicators()
+  .addIndicators({name: "about"})
   .addTo(aboutController);
 
 
@@ -41,11 +43,11 @@ $(document).ready(function(){
 
   let expeditionScene = new ScrollMagic.Scene({
     triggerElement: ".expedition",
-    triggerHook: 0.1,
+    triggerHook: 0.2,
     reverse:false
   })
   .setTween(expedition)
-  .addIndicators()
+  .addIndicators({name: "expedition"})
   .addTo(expeditionController);
 
   const floaterController = new ScrollMagic.Controller();
@@ -58,18 +60,18 @@ $(document).ready(function(){
 
   let floaterScene = new ScrollMagic.Scene({
     triggerElement: ".floaters",
-    triggerHook: 0.8,
+    triggerHook: 0.95,
     reverse: false
   })
   .setTween(floater)
-  .addIndicators()
+  .addIndicators({name: "floater"})
   .addTo(floaterController);
 
 
   const leadersController = new ScrollMagic.Controller();
 
   leaders
-  .from($('.img-box'), 1, {autoAlpha:0, skewY:20, yPercent:100, ease:Power2, stagger:0.5})
+  .from($('.img-box'), 1, {autoAlpha:0, skewY:10, yPercent:50, ease:Power2, stagger:0.2})
   .from($('#leaders-content'), 1, {autoAlpha:0, scaleX:0, ease:Power3, transfomOrigin: "center"})
   
 
@@ -79,7 +81,7 @@ $(document).ready(function(){
     reverse:false
   })
   .setTween(leaders)
-  .addIndicators()
+  .addIndicators({name: "leaders"})
   .addTo(leadersController);
 
   // let aboutTween = new TweenMax.from('.text-container', 1, {opacity: 0, y: -100});
@@ -93,6 +95,22 @@ $(document).ready(function(){
     reverse: false
   })
   .setTween(photos)
-  .addIndicators()
+  .addIndicators({name: "photos"})
   .addTo(photoController);
+
+
+  $(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+  
+    $('#logo').css("transform", 'translate(0px, -'+wScroll/2+ '%)');
+
+    $('#hero-content').css("transform", 'translate(0px, -'+wScroll/8+ '%)');
+    
+    $('#expedition-content').css("transform", 'translate(0px, -'+wScroll/200+ '%)');
+    
+    $('.contact-us h1').css("transform", 'translate(0px, -'+wScroll/40+ '%)');
+    
+    $('#contact-container').css("transform", 'translate(0px, -'+wScroll/150+ '%)');
+   
+  });
 })
