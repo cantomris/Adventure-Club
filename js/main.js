@@ -33,7 +33,7 @@ $(document).ready(function(){
     
   })
   .setTween(about)
-  .addIndicators({name: "about"})
+  // .addIndicators({name: "about"})
   .addTo(aboutController);
 
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
     reverse:false
   })
   .setTween(expedition)
-  .addIndicators({name: "expedition"})
+  // .addIndicators({name: "expedition"})
   .addTo(expeditionController);
 
   const floaterController = new ScrollMagic.Controller();
@@ -55,7 +55,7 @@ $(document).ready(function(){
   floater
   .from(floaterBox, {duration: 1, opacity: 0, y: 500, ease: "power1", stagger: 0.2})
   .from(floaterText, 1, {autoAlpha: 0, height: 0, transfomOrigin: "bottom", ease: "power1", stagger: 0.2})
-  .from($('.read-more'), 0.5, {scaleY:0, ease:Power3, transformOrigin: "top left"
+  .from($('.floater-button'), 0.5, {scaleY:0, ease:Power3, transformOrigin: "top left"
   });
 
   let floaterScene = new ScrollMagic.Scene({
@@ -64,7 +64,7 @@ $(document).ready(function(){
     reverse: false
   })
   .setTween(floater)
-  .addIndicators({name: "floater"})
+  // .addIndicators({name: "floater"})
   .addTo(floaterController);
 
 
@@ -81,7 +81,7 @@ $(document).ready(function(){
     reverse:false
   })
   .setTween(leaders)
-  .addIndicators({name: "leaders"})
+  // .addIndicators({name: "leaders"})
   .addTo(leadersController);
 
   // let aboutTween = new TweenMax.from('.text-container', 1, {opacity: 0, y: -100});
@@ -95,7 +95,7 @@ $(document).ready(function(){
     reverse: false
   })
   .setTween(photos)
-  .addIndicators({name: "photos"})
+  // .addIndicators({name: "photos"})
   .addTo(photoController);
 
 
