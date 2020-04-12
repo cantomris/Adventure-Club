@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).bind("load", function(){
   const hero = gsap.timeline();
   const about = new TimelineMax();
   const floater = new TimelineMax();
