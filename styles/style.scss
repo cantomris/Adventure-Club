@@ -23,7 +23,7 @@ img {
   box-sizing: border-box;
 }
 
-.read-more {
+@mixin read-more {
   background-color: #3F4759;
   text-transform: uppercase;
   border: none;
@@ -40,6 +40,7 @@ img {
   }
 }
 
+.read-more{@include read-more();}
 .hero {
   background: url(../images/hero.png);
   background-position: center;
@@ -118,7 +119,7 @@ img {
 
   #expedition-content {
     height: 100%;
-    padding: 4em;
+    padding: 2em;
     padding-top: 28em;
     color: white;
     display: flex;
@@ -309,7 +310,7 @@ img {
     
   }
   #contact-container {
-    padding: 0 4em;
+    padding: 0 3em;
     color: white;
     #contact-content{
       font-size: 18px;
@@ -321,8 +322,9 @@ img {
     }
   }
   form{
-    padding: 6em;
+    padding: 3em;
     width: 100%;
+    button{@include read-more();}
     input{
       width: 100%;
       height: 50px;
@@ -334,10 +336,10 @@ img {
     }
     textarea{
       width: 100%;
-      &::placeholder{
-      padding-left: 1em;
-      padding-top: 1em;
+      padding: 1em;
       font-size: 18px;
+      box-sizing: border-box;
+      &::placeholder{
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       color: #3F4759;
       text-transform: capitalize;
@@ -354,6 +356,8 @@ footer{
     color: white;
   }
 }
+
+
 
 @media (min-width: 768px){
 

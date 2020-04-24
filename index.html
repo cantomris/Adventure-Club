@@ -52,6 +52,7 @@
         <button class="read-more floater-button">Read more</button> 
       </div>
       
+
       <div class="floater two">
         <div class="floater-img">
           <img src="images/mountains.jpg" alt="">
@@ -93,10 +94,10 @@
   </section>
   <section class="photos">
     <div id="grid-container">
-      <div id="bg-img1"></div>
-      <div id="bg-img2"></div>
-      <div id="bg-img3"></div>
-      <div id="bg-img4"></div>
+      <div class="grid-photos" id="bg-img1"></div>
+      <div class="grid-photos" id="bg-img2"></div>
+      <div class="grid-photos" id="bg-img3"></div>
+      <div class="grid-photos" id="bg-img4"></div>
     </div>
   </section>
   <section class="contact-us">
@@ -111,32 +112,33 @@
         <h3>info@mountain-expeditions.com</h3>
       </div>
     </div>
-    <form action="submit">
-      <input type="text" value="Enter Your Name" id="name">
-      <input type="email" value="Enter a Vaild email address">
-      <textarea name="" value="Enter your message" id="" cols="30" rows="10" placeholder="Enter your message here"></textarea>
-      <button class="read-more">SEND</button>
+    <form id='contactForm'>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <input type="email" id="email" placeholder="Enter a Vaild email address" />
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here"></textarea>
+      <button id="submit">SEND</button>
     </form>
   </section>
   <footer>
     <p>This page is created with HTML5, CSS3, Javascript (Vanilla, JQuery, GSAP, TweenMax and ScrollMagic)</p>
   </footer>
   
-  
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script> 
+  
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+  
+
   
   <script defer src="./js/main.js"></script>
   

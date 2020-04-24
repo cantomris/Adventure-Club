@@ -72,7 +72,7 @@ $(document).ready(function(){
 
   leaders
   .from($('.img-box'), 1, {autoAlpha:0, skewY:10, yPercent:50, ease:Power2, stagger:0.2})
-  .from($('#leaders-content'), 1, {autoAlpha:0, scaleX:0, ease:Power3, transfomOrigin: "center"})
+  .from($('#leaders-content'), 1, {autoAlpha:0, y:100, ease:Power3, transfomOrigin: "center"})
   
 
   let leadersScene = new ScrollMagic.Scene({
@@ -88,7 +88,7 @@ $(document).ready(function(){
   const photoController = new ScrollMagic.Controller();
   let photos = new TimelineMax();
   
-  photos.from($('#grid-container'), 1, {autoAlpha:0, scaleY:0});
+  photos.from($('.grid-photos'), 1, {autoAlpha:0, x:-100, stagger: 0.2});
   let photoScene = new ScrollMagic.Scene({
     triggerElement: ".photos",
     triggerHook: 0.9,
@@ -106,7 +106,7 @@ $(document).ready(function(){
 
     $('#hero-content').css("transform", 'translate(0px, -'+wScroll/8+ '%)');
     
-    $('#expedition-content').css("transform", 'translate(0px, -'+wScroll/200+ '%)');
+    $('#expedition-content').css("transform", 'translate(0px, -'+wScroll/3000+ '%)');
     
     $('.contact-us h1').css("transform", 'translate(0px, -'+wScroll/40+ '%)');
     
@@ -114,3 +114,45 @@ $(document).ready(function(){
    
   });
 })
+
+// Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyCTakkr8DGs08D-Dfnh2qlUYhtjjYJQ-A4",
+authDomain: "contactform-11f93.firebaseapp.com",
+databaseURL: "https://contactform-11f93.firebaseio.com",
+projectId: "contactform-11f93",
+storageBucket: "contactform-11f93.appspot.com",
+messagingSenderId: "944185853904",
+appId: "1:944185853904:web:97a614cf2a28e609851bd5",
+measurementId: "G-2W02D67RGH"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+let messageRef = firebase.database().ref('messages');
+
+
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+function submitForm(e){
+e.preventDefault();
+
+const name = getInputVal('name');
+const email = getInputVal('email');
+const message = getInputVal('message');
+
+saveMessage(name, email, message);
+}
+function getInputVal(id){
+return document.getElementById(id).value;
+}
+
+function saveMessage(name, email, message){
+let newMessageRef = messageRef.push();
+newMessageRef.set({
+name: name,
+email: email,
+message: message
+});
+}
