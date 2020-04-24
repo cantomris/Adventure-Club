@@ -155,4 +155,15 @@ name: name,
 email: email,
 message: message
 });
+
+}
+
+
+const contact = document.getElementById("contactForm").onsubmit = function() {onSubmit()};
+
+function onSubmit() {
+  alert("Your message has been sent.");
+  document.getElementById("name").value="";
+  document.getElementById("email").value="";
+  document.getElementById("message").value="";
 }
