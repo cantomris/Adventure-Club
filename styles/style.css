@@ -81,7 +81,7 @@ img {
 }
 
 .about-us {
-  padding: 2em 4em;
+  padding: 2em;
   margin-bottom: -22em;
 }
 
@@ -124,9 +124,9 @@ img {
 .expedition {
   background: url(../images/background-hills.png);
   background-position: center;
-  background-size: 300%;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 1200px;
+  height: 1300px;
 }
 
 .expedition #expedition-content {
@@ -175,7 +175,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 3em;
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 
 .floaters .one {
@@ -225,7 +225,7 @@ img {
 }
 
 .our-leaders .img-box {
-  padding: 1em 4em;
+  padding: 1em 3em;
   max-width: 500px;
   height: 500px;
   margin: auto;
@@ -241,7 +241,7 @@ img {
 }
 
 .our-leaders #leaders-content {
-  padding: 4em;
+  padding: 2em;
   margin-top: 5em;
 }
 
